@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read User</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="boxOne">
+        <table>
+            <div class="top">
+                <tr>
+                    <th>#ID</th>
+                    <th>Full Name</th>
+                    <th>E-mail</th>
+                    <th>Created</th>
+                    <th>Actions</th>
+                </tr>
+            </div>
+            <div class="row">
+                <tr>
+                    <td>{{user.id}}</td>
+                    <td>{{user.first_name}} {{user.last_name}}</td>
+                    <td>E-mail: {{user.email}}</td>
+                    <td>{{user.created_at}}</td>
+                    <td>
+                        <a href="/user/{{user.id}}">Show</a>
+                        <a href="/user/{{user.id}}/edit">Edit</a>
+                        <a href="/user/{{user.id}}/destroy">Delete</a>
+                    </td>
+                </tr>
+            </div>
+        </table>
+    </div>
+    <div id="Home">
+        <p><a href='/read_all'>Home</a></p>
+    </div>
+</body>
+</html>
